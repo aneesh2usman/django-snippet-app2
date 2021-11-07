@@ -57,11 +57,26 @@ curl --location --request POST 'http://localhost:8000/api/token/' \
 --form 'username=admin' \
 --form 'password=As@12345'
 
+
+OUTPUT
+
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNjM3OTYyMCwianRpIjoiZjU2NTFhOTk3MDEwNGEwNjgzYzg2NmZhYjRiZDVkN2IiLCJ1c2VyX2lkIjoxfQ.m-i03nlmGtCIdiIvoMPGy_x3cAZowg_XDjKlkT3t4w8",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MjkzNTIwLCJqdGkiOiJmMjk2YTdkNzc1ZTA0YmZjODIxMzNmMjQ1NjBiODA4ZiIsInVzZXJfaWQiOjF9._QkI0epmw0lCmF3jybzgkhBV-mMaGoE4xbeV5yBGvuw"
+}
+
+
 ```
 ### Refresh Token
 ```
 curl --location --request POST 'http://localhost:8000/api/token/refresh/' \
 --form 'refresh=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNjM3NDI1NSwianRpIjoiNjllNDAwZmUzY2E0NGQwZTg3M2I1NTI0ZjFiMmIxOTciLCJ1c2VyX2lkIjoxfQ.dRwUrIllYmpfn9HZShn5jdbfgQt6esXdOoRAdBkkF5A'
+
+OUTPUT
+
+{
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MjkzNjgwLCJqdGkiOiIzMzEwZGI2ZWE2ZDg0NTg0OWI3YjU2MzE4OTU2OTg4ZiIsInVzZXJfaWQiOjF9.V88qfy3_ARe6ckMsgbJI3ff67PILuw1i8BrXl322VoM"
+}
 
 ```
 
@@ -79,6 +94,24 @@ curl --location --request POST 'http://localhost:8000/snippets/snippet/' \
     
 }'
 
+
+OUTPUT
+
+{
+    "id": 6,
+    "title": "test",
+    "message": "test",
+    "tags": [
+        {
+            "id": 2,
+            "title": "gfgfgfgghhghg",
+            "tag_details": "http://localhost:8000/snippets/tag/2/"
+        }
+    ],
+    "author": "admin",
+    "created": "2021-11-07T13:53:59.903365Z",
+    "snippet_details": "http://localhost:8000/snippets/snippet/6/"
+}
 ```
 
 ### Tag Action (GET)
@@ -86,6 +119,25 @@ curl --location --request POST 'http://localhost:8000/snippets/snippet/' \
 curl --location --request GET 'http://localhost:8000/snippets/tag/' \
 --data-raw ''
 
+OUTPUT
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "title": "test",
+            "tag_details": "http://localhost:8000/snippets/tag/1/"
+        },
+        {
+            "id": 2,
+            "title": "gfgfgfgghhghg",
+            "tag_details": "http://localhost:8000/snippets/tag/2/"
+        }
+    ]
+}
 ```
 
 
