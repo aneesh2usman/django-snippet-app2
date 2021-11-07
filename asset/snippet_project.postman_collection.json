@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "cf3837ff-8579-4d27-a921-12db38cdb93b",
+		"name": "snippet_project",
+		"description": "Api used for snippet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "aneesh",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aneesh@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNDcyOTgzMCwianRpIjoiNjlkMGM0ZDk2NDZmNGJmNzg4MzhhNGFmNDdiOWYzZWEiLCJ1c2VyX2lkIjozfQ.kRfXywLe4flkFtqnf9TlcxIarzwd--S02ChrZOZbDeg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "snippet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
