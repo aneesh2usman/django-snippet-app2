@@ -1,5 +1,4 @@
 
-#https://www.youtube.com/watch?v=mHz6UuDXPE8
 """
 Django settings for main project.
 
