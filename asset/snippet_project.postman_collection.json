@@ -75,7 +75,187 @@
 			"response": []
 		},
 		{
-			"name": "snippet",
+			"name": "snippet Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tags",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "snippet update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "snippet list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "snippet Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2Mjg4MTU1LCJqdGkiOiI3NDg5NzBkMzYzMjE0ZWQwOTlkMTQ4ZTNlNmY4OTc2MyIsInVzZXJfaWQiOjF9.kM4dZtiCKJHAWigjADpj4XprucUOY1dIsx5vuBhBtgk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"test\",\n    \"message\":\"test\",\n    \"tags\":[\n        {\"title\":\"gfgfgfgghhghg\"}\n    ]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/snippets/snippet/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"snippets",
+						"snippet",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "snippet details",
 			"request": {
 				"method": "POST",
 				"header": [
