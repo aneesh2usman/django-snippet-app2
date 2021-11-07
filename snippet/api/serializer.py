@@ -47,7 +47,7 @@ class SnippetsSerializer(serializers.ModelSerializer):
         instance = super(SnippetsSerializer, self).create(validated_data)
         if tags_datas:
             for tags_data in tags_datas:
-                tag,created = self.get_or_update_tags(tags_data)
+                tag,created = self.get_or_create_tags(tags_data)
                 instance.tags.add(tag)
         return instance
     def update(self, instance, validated_data):
@@ -55,13 +55,13 @@ class SnippetsSerializer(serializers.ModelSerializer):
         instance = super(SnippetsSerializer, self).update(instance, validated_data)
         if tags_datas:
             for tags_data in tags_datas:
-                tag,created = self.get_or_update_tags(tags_data)
+                tag,created = self.get_or_create_tags(tags_data)
                 instance.tags.add(tag)
         elif tags_delete_all :
             instance.tags.clear() 
             pass
         return instance
-    def get_or_update_tags(self,tags_data={}):
+    def get_or_create_tags(self,tags_data={}):
         tag=None
         if tags_data:
             tag,created = Tags.objects.filter(title__iexact=tags_data['title']).get_or_create(
